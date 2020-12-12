@@ -1,0 +1,227 @@
+
+body {
+    margin: 0;
+    display: flex;/*cette propriété est interessante, au début j'ai cru que c'était inutile, finalement ça influe sur l'affichage, à tester*/
+    flex-direction: column;
+    background-image: url(img/gifgle.gif);
+    padding:0;
+    /*-webkit-background-size: cover;/*j'ignore ce que cette propriété a comme effet, en la supprimant rien ne change, une explication? steve jobs?*/
+    background-size: cover;/*en principe l'image de fond est agrandie pour couvrir la totalité de l'arière plan de l'élement tout en gardant ses proportions*/
+}
+/*je préfère mettre les propriété générales tout en haut, pour éviter des répétitions*/
+h2{
+    padding: 50px;
+    font-size: 25px;
+}
+h3 {
+    padding: 10px;
+    font-size: 25px;
+}
+p {
+    padding: 10px;
+}
+
+a{
+    background-color: pink;
+    color: white;
+    text-decoration: none;
+}
+a:hover/*static effects makes a website more user friendly*/
+{
+  color:black;
+
+}
+
+/* tag supprimé et propriétés transférées au body
+.box {
+}
+*/
+header{
+    background-color: pink;
+    height: 100px;/*dans ce cas height n'a pas d'effet négatif sur l'affichage*/
+    display: flex;
+    flex-direction: row-reverse;
+    /*box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color];*/
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.logoZ {
+   margin-top: 20px;
+  margin-left: 20px;
+   flex-basis: 70%;/*dans un conteneur de type d'affichage flex, chaque child-element peut avoir le pourcentage d'espace réservé dans le parent*/
+}
+.external{
+    /*margin-right: 20px;*/
+    flex-basis: 10%;
+    border: 5px transparent solid;/*pourquoi un border transparent?*/
+    margin-top: 10px;
+}
+
+.external p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+
+
+
+.imgz {/*le même nom que le tag img prête a confusion*/
+    width: 50px;
+    height: 50px;
+}
+
+.section1 {
+     display: flex;
+     flex-direction: row-reverse;
+     justify-content: space-between;
+     margin-top: 80px;
+     padding-right: 20px;
+     padding-left: 20px;
+}
+/*les propriétés identiques (width, font-family, box-shadow) auraient pu être affectée au tag <section div> et dans les classes ne changer que les background-color, mais c'est pas si grave*/
+.presentation {
+   background-color: #212F3D;
+   width: 400px;
+   /*never use height! That's what she said, quand on réduit la largeur de la fenetre html, le text dépasse en bas et c'est pas beau*/
+   /*height: 400px;*/
+   font-family: 'Bradley Hand', cursive;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   border-radius: 30px;
+}
+
+.travel {
+    background-color:#566573  ;
+    width: 400px;
+    /*height: 400px;*/
+    font-family: 'Bradley Hand', cursive;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 30px;
+}
+
+.formation {
+    background-color: #ABB2B9;
+    width: 400px;
+    font-family: 'Bradley Hand', cursive;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 30px;
+}
+
+
+.imgME {
+    width: 80px;
+    height: 100px;
+    /*pour que l'image puisse être centrée dans le block parent, elle doit avoir la propriété display block et le margin mis en auto*/
+    display: block;
+    margin: 0 auto;
+    /*margin-left: 150px;*/
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.dip {
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: 0 auto;
+    /*margin-left: 150px;*/
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.section2 {
+   color: white;
+    font-family: 'Bradley Hand', cursive;
+    font-size: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+.section3{
+    margin-top: 50px;
+    background-color: white;
+}
+
+.futur {
+    width: 200px;
+    height: 200px;
+    display: block;/*l'image est de type inline, pour pouvoir la centrer dans la fenetre horizontalement avec margin:auto, il faut la convertire en affichage block
+    pour rappel, les éléments block prennent toute la largeur du parent, ie : l'élément suivant sera en dessous*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section4 {
+    color: white;
+    font-family: 'Bradley Hand', cursive;
+    border: 5px white solid;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/*à l'interieur de la section4, pour <h2> et <p> les propriétés margin-left et margin-right sont hérité, inutile de les répéter*/
+
+/*le footer comporte une division social pour liens vers les réseaux sociaux, devant être centrés dans la fenetre
+ainsi qu'un text de copyright situé en bas a droite de la fenêtre*/
+footer {
+    background-color: pink;
+    height: 200px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;/*il suffit de tout centrer dans le footer, cette propriété sera ecrasée dans le copyright, faut en profiter de la cascade*/
+}
+
+footer h3 {
+    color: white;
+    font-family: 'Bradley Hand', cursive;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+
+.social {
+   width: 200px ;
+   display: block;
+   margin-left: auto;
+  margin-right: auto;
+}
+
+.fb {
+    width: 40px;
+    height: 40px;
+    border:4px transparent solid;
+    border-radius: 30px;
+}
+.fb:hover{
+  border:4px lightblue solid;
+}
+.insta {
+    width: 40px;
+    height: 40px;
+    border:4px transparent solid;
+    border-radius: 30px;
+}
+.insta:hover{
+  border:4px lightgray solid;
+}
+.snap {
+    width: 40px;
+    height: 40px;
+    border:4px transparent solid;
+    border-radius: 30px;
+}
+.snap:hover{
+  border:4px lightyellow solid;
+}
+
+
+
+footer p {
+    font-size: 20px;
+    color: white;
+    font-family: 'Bradley Hand', cursive;
+    text-align: right;
+}
